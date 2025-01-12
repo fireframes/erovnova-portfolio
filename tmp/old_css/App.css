@@ -1,0 +1,10 @@
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 30px;
+  overflow: hidden;
+}
+
+p {
+  font-size: 18px;
+}
