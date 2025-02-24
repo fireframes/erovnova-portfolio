@@ -25,7 +25,7 @@
 
   font-family: "Gilroy", Arial, Helvetica, sans-serif;
   color: rgba(255, 255, 255, 0.87);
-  color-scheme: light dark;
+  color-scheme: light;
 }
 
 body {
@@ -324,6 +324,7 @@ main {
   position: relative;
   left: 70%;
   background-color: #803d47;
+  color: #fff;
   font-size: 18px;
   padding: 10px;
   border-radius: 12px;
