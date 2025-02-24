@@ -94,6 +94,13 @@ a:focus {
   color: inherit; /* Prevents color change for active links */
 }
 
+/* Button styles */
+
+button,
+button * {
+  font-family: "Gilroy", sans-serif !important;
+}
+
 /* Header styles */
 header {
   position: fixed;
@@ -328,7 +335,7 @@ main {
   border-radius: 12px;
   border-style: none;
   top: -10px;
-  left: 780px;
+  left: 770px;
   opacity: 90%;
 }
 
@@ -343,7 +350,6 @@ main {
   border-radius: 8px;
   cursor: pointer;
   font-size: 20px;
-  font-family: "Gilroy", sans-serif !important;
   color: var(--primary-color);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
