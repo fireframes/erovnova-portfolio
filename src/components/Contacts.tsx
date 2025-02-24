@@ -24,36 +24,8 @@ const Contacts = () => {
             </div>
           </div>
 
-          {/* Location Information */}
-          <div className="contact-card">
-            <h3>Локация</h3>
-            <div className="contact-item">
-              <MapPin className="icon" />
-              <p>Город, Адрес</p>
-            </div>
-            <div className="location-details">
-              <p>Возможны как очные, так и онлайн-консультации</p>
-            </div>
-          </div>
-
-          {/* Schedule Information */}
-          <div className="contact-card">
-            <h3>График работы</h3>
-            <div className="contact-item">
-              <Calendar className="icon" />
-              <p>Пн - Пт</p>
-            </div>
-            <div className="contact-item">
-              <Clock className="icon" />
-              <p>10:00 - 19:00</p>
-            </div>
-            <p className="schedule-note">
-              Запись на консультацию по предварительной договоренности
-            </p>
-          </div>
-
           {/* Contact Form or Additional Info */}
-          <div className="contact-card">
+          {/* <div className="contact-card">
             <h3>Записаться на консультацию</h3>
             <p>Чтобы записаться на консультацию:</p>
             <ol>
@@ -64,7 +36,7 @@ const Contacts = () => {
             <p className="response-time">
               Я отвечаю на сообщения в течение 24 часов
             </p>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
