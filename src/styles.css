@@ -14,15 +14,11 @@
 :root {
   --max-width: 1100px;
   --container-padding: 40px;
-  --primary-color: rgb(86, 69, 63);
-  --secondary-color: rgb(240, 240, 229);
+  --primary-color: #56453f;
+  --secondary-color: #f0f0e5;
   --accent-color: #9e8b7c;
   --accent-hover: #8b645a;
-  --primary-gradient: linear-gradient(
-    90deg,
-    rgb(240, 240, 229),
-    rgb(228, 199, 184)
-  );
+  --primary-gradient: linear-gradient(90deg, #f0f0e5, #e4c7b8);
 
   font-family: "Gilroy", sans-serif !important;
   color: rgba(255, 255, 255, 0.87);
