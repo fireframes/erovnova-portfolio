@@ -43,7 +43,7 @@
 
 .accordion-item .title h3 {
   font-size: 21px;
-  font-weight: 600;
+  font-weight: 200;
 }
 .accordion-item .title:hover {
   background: #fdf3ef; /* Subtle hover effect */

@@ -485,9 +485,77 @@ main {
   background: var(--accent-hover);
 }
 
+/* Contacts section styling */
 #contacts {
-  padding-bottom: 140px; /* temp */
+  background-color: transparent;
+  padding: 0 0 60px;
 }
+
+.contacts-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.contact-card {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-card h3 {
+  color: var(--primary-color);
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.contact-item .icon {
+  color: var(--accent-color);
+}
+
+.contact-item a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+  color: var(--accent-hover);
+}
+
+.social-links {
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid var(--secondary-color);
+}
+
+.location-details,
+.schedule-note,
+.response-time {
+  margin-top: 15px;
+  font-size: 16px;
+  color: var(--accent-color);
+}
+
+.contact-card ol {
+  margin: 15px 0;
+  padding-left: 20px;
+}
+
+.contact-card li {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
 @media (max-width: 768px) {
   :root {
     --container-padding: 20px;
@@ -594,8 +662,8 @@ main {
   }
 
   #hero .hero-content img {
-    width: 100%;
-    max-height: 300px;
+    width: 45%;
+    max-height: 100%;
     margin: 10px 0;
   }
 
@@ -660,6 +728,25 @@ main {
     left: 50%;
     transform: translateX(-50%);
     font-size: 16px;
+  }
+
+  .contacts-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .contact-card {
+    padding: 20px;
+  }
+
+  .contact-card h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .contact-item {
+    gap: 10px;
+    margin-bottom: 12px;
   }
 }
 
