@@ -290,6 +290,9 @@ main {
 }
 
 #hero blockquote {
+  justify-content: center;
+  text-align: center;
+  line-height: 1.6;
   font-size: 20px;
   font-weight: 600;
   font-style: italic;
