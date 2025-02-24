@@ -149,7 +149,7 @@ footer {
 }
 
 .navbar a {
-  font-size: 14px;
+  font-size: 16px;
   display: inline-block;
   transition: transform 0.1s linear, color 0.3s linear;
   text-decoration: none;
@@ -260,9 +260,7 @@ main {
 
 #hero .hero-content {
   display: flex;
-  /* gap: 1.5rem; */
   align-items: center;
-  /* width: 100%; */
   padding: 20px;
   color: var(--primary-color);
 }
@@ -275,8 +273,8 @@ main {
   flex-direction: column;
   gap: 2rem;
   margin: 20px;
-  padding: 20px;
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  padding: 26px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
   text-indent: 2em; /* Add indentation to the beginning of paragraphs */
   border-radius: 10px;
 }
@@ -299,48 +297,76 @@ main {
 }
 
 #sex-therapy .container {
-  border-left: var(--accent-color) 2px solid;
+  /* border-left: var(--accent-color) 2px solid; */
 }
 
 #about {
   background-color: transparent;
 }
 
-/* HELP */
+/* Help */
+.help {
+  min-height: 70vh; /* Changed from fixed height to minimum height */
+  padding-bottom: 40px; /* Add padding at bottom to prevent content cutoff */
+}
 
-#help {
-  height: 70vh;
+.help-list {
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  list-style: none;
+}
+
+.help-list-item {
+  margin-bottom: 12px; /* Reduced margin between items */
 }
 
 .side-button {
   position: relative;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  left: 70%;
+  background-color: hwb(325 36% 18%);
   font-size: 18px;
-  text-transform: uppercase;
-  width: 66%;
-  height: 40px;
-  color: #fff;
-
-  /* border-color: var(--primary-color); */
-  /* border-width: 2px; */
-  border: none;
-  border-radius: 10px;
-  box-shadow: 2px 2px 8px #362d286d;
-  /* text-shadow: 1px 1px 2px #8b645a; */
-  background: var(--accent-color); /* Corrected from val to var */
-  opacity: 70%;
+  padding: 10px;
 }
 
-.side-button:hover {
-  background: var(--accent-hover);
+.section-button {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  background-color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 20px;
+  color: var(--primary-color);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.section-button:hover {
+  background-color: var(--secondary-color);
+}
+
+.section-content {
+  padding: 8px 16px 16px 32px; /* Adjusted padding */
+  background-color: white;
+  border-radius: 0 0 8px 8px;
+  margin-top: 1px; /* Reduced margin */
+}
+
+.section-content ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.section-content li {
+  padding: 8px 0;
+  font-size: 16px; /* Slightly reduced font size */
+  line-height: 1.5;
 }
 
 /* VALUES */
-
 #values {
   background-color: transparent;
 }
@@ -388,7 +414,6 @@ main {
 #education .container {
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
   gap: 2rem;
 }
 
@@ -428,6 +453,7 @@ main {
   font-size: 24px;
   text-indent: 8px;
   justify-content: center;
+  padding: 30px 20px 40px;
 }
 
 #prices .card strong {
@@ -459,98 +485,200 @@ main {
   background: var(--accent-hover);
 }
 
-#faq {
+#contacts {
+  padding-bottom: 140px; /* temp */
 }
-
-/* Media queries */
 @media (max-width: 768px) {
-  section {
-    scroll-margin-top: 60px;
+  :root {
+    --container-padding: 20px;
   }
 
+  /* Typography adjustments */
   h1 {
-    font-size: 36px;
+    font-size: 28px;
+    margin-bottom: 0.5rem;
   }
 
   h2 {
-    text-align: left;
-    font-size: 20px;
+    font-size: 24px;
+    margin: 20px 0 15px;
   }
 
   p {
     font-size: 16px;
+    line-height: 1.6;
+    padding: 20px;
+  }
+
+  li {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  /* Container adjustments */
+  .container {
+    padding: 20px;
+  }
+
+  /* Navigation */
+  .navbar {
+    font-size: large;
+    gap: 1rem;
+  }
+
+  .navbar .container {
+    padding: 0 20px;
+    flex-direction: column;
+  }
+
+  .navbar .fix-home {
+    padding: 8px;
+    font-size: 14px;
   }
 
   .nav-menu {
-    display: flex;
-  }
-
-  .menu-btn {
-    display: flex;
-    flex-direction: column;
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 20px;
   }
 
   .nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--primary-gradient);
+    padding: 20px;
     display: none;
-    flex-direction: column;
-    align-items: flex-start;
   }
 
   .nav.show {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
   }
 
-  .nav.show a {
-    display: flex;
+  .social {
+    margin-top: 10px;
     justify-content: center;
   }
 
-  .social.show {
-    align-items: flex-start;
+  /* Hero section */
+  #hero {
+    padding-top: 2rem;
   }
 
   #hero h1 {
-    /* font-size: 38px; */
+    font-size: 32px;
+    text-align: center;
   }
 
   #hero h2 {
-    text-align: left;
     font-size: 20px;
+    text-align: center;
+    padding: 0 20px;
   }
 
   #hero .hero-content {
-    padding-left: 0;
-
     flex-direction: column;
-    gap: 1.5rem;
-  }
-
-  #hero .hero-content img {
-    max-width: 100%;
-    max-height: 400px;
+    padding: 10px;
   }
 
   #hero .hero-content .text-content {
-    margin: 0;
     width: 100%;
-    text-align: left;
-    padding: auto;
-    border: none;
-    box-shadow: none;
-    border-radius: 0;
+    margin: 10px;
+    padding: 20px;
+    text-indent: 1em;
   }
 
-  #hero .container {
-    /* padding: 0 20px; */
+  #hero .hero-content img {
+    width: 100%;
+    max-height: 300px;
+    margin: 10px 0;
+  }
+
+  /* Values section */
+  #values .grid {
+    gap: 1rem;
   }
 
   #values .card {
-    width: calc(
-      50% - 1rem
-    ); /* Adjust width to fit 2 cards per row on smaller screens */
+    width: 100%;
+    height: auto;
+    min-height: 200px;
+    padding: 20px;
+  }
+
+  /* Prices section */
+  #prices .card {
+    width: 100%;
+    margin: 20px 0;
+    padding: 30px 15px 15px;
+  }
+
+  #prices .card h3 {
+    font-size: 18px;
+  }
+
+  #prices .card p {
+    font-size: 20px;
+    padding: 20px 15px 30px;
+  }
+
+  #prices .button {
+    width: 80%;
+    font-size: 16px;
+  }
+
+  /* Help section */
+  .help {
+    min-height: auto;
+    padding-bottom: 20px;
+  }
+
+  .section-button {
+    padding: 12px;
+    font-size: 16px;
+  }
+
+  .section-content {
+    padding: 8px 12px 12px 24px;
+  }
+
+  .section-content li {
+    font-size: 14px;
+    padding: 6px 0;
+  }
+
+  .side-button {
+    float: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 16px;
   }
 }
 
-/* @media (max-width: 480px) {
-  #values .card {
-    width: 100%; /* Full width for single column on very small screens */
+/* Additional breakpoint for very small devices */
+@media (max-width: 480px) {
+  #hero h1 {
+    font-size: 28px;
+  }
+
+  #hero .hero-content .text-content {
+    margin: 5px;
+    padding: 15px;
+  }
+
+  #prices .card {
+    padding: 20px 10px 10px;
+  }
+
+  .container {
+    padding: 15px;
+  }
+}

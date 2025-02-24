@@ -1,13 +1,18 @@
 import SideMenuButton from "./SideMenuButton";
 
-interface NoHelpProps {
+interface HelpNotProps {
   onClick?: () => void;
 }
-const NoHelp: React.FC<NoHelpProps> = ({ onClick }) => {
+
+const HelpNot: React.FC<HelpNotProps> = ({ onClick }) => {
   return (
     <div className="container">
-      {/* <h2>Ограничения моей работы</h2> */}
       <h2>Пока я не обладаю квалификацией для работы с:</h2>
+      <SideMenuButton
+        className="side-button"
+        onClick={onClick}
+        text="С чем я могу помочь"
+      />
       <ul>
         <li>Детьми и подростками до 18 лет</li>
         <li>Парами</li>
@@ -28,13 +33,8 @@ const NoHelp: React.FC<NoHelpProps> = ({ onClick }) => {
           специалиста.
         </blockquote>
       </ul>
-      <SideMenuButton
-        className="side-button"
-        onClick={onClick}
-        text="С чем я могу помочь"
-      />
     </div>
   );
 };
 
-export default NoHelp;
+export default HelpNot;

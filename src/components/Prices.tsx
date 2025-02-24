@@ -8,7 +8,7 @@ const Prices = () => {
         <div className="card">
           <h3>Индивидуальная консультация</h3>
           <p>
-            <strong>1600₽</strong> или <strong>15€</strong> / 60 мин
+            <strong>2000₽</strong> или <strong>20$</strong> / 60 мин
           </p>
           <a
             href={telegramLink}

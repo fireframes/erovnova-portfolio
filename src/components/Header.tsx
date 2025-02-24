@@ -52,7 +52,7 @@ const Header = () => {
             <a href="#education">Образование</a>
             <a href="#prices">Стоимость</a>
             <a href="#faq">FAQ</a>
-            <a href="#contact">Контакты</a>
+            <a href="#contacts">Контакты</a>
           </div>
           <div className={`social ${isMenuOpen ? "show" : ""}`}>
             <a href={telegramLink} target="_blank" rel="noopener noreferrer">
