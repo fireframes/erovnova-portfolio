@@ -7,7 +7,8 @@
 /* Global styles and variables */
 @font-face {
   font-family: "Gilroy";
-  src: url("assets/fonts/Gilroy-Light.otf") format("truetype");
+  src: url("assets/fonts/Gilroy-Light.otf") format("truetype"),
+    url("assets/fonts/Gilroy-ExtraBold.otf") format("truetype");
 }
 
 :root {
@@ -23,7 +24,7 @@
     rgb(228, 199, 184)
   );
 
-  font-family: "Gilroy", Arial, Helvetica, sans-serif;
+  font-family: "Gilroy", sans-serif !important;
   color: rgba(255, 255, 255, 0.87);
   color-scheme: light;
 }
@@ -38,9 +39,6 @@ body {
 h1 {
   font-size: 36px;
   margin: 0 0 1rem;
-}
-
-h2 {
 }
 
 p {
@@ -345,6 +343,7 @@ main {
   border-radius: 8px;
   cursor: pointer;
   font-size: 20px;
+  font-family: "Gilroy", sans-serif !important;
   color: var(--primary-color);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
@@ -411,8 +410,8 @@ main {
 
 #values .card:hover {
   transform: scale(1.03);
-  /* box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2); */
   transition: transform 0.3s ease-in-out;
+  opacity: 0.95;
 }
 
 /* EDUCATION */

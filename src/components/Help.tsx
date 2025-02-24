@@ -70,7 +70,7 @@ const Help: React.FC<HelpProps> = ({ onClick }) => {
                 openSections[section.title] ? "active" : ""
               }`}
             >
-              <span>{section.title}</span>
+              {section.title}
               {openSections[section.title] ? (
                 <ChevronDown size={20} />
               ) : (
