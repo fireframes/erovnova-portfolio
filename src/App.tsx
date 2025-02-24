@@ -9,6 +9,7 @@ import { useEffect } from "react";
 
 function App() {
   useEffect(() => Analytics.inject());
+
   return (
     <>
       <Header />

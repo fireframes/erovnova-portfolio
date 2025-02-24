@@ -323,9 +323,14 @@ main {
 .side-button {
   position: relative;
   left: 70%;
-  background-color: hwb(325 36% 18%);
+  background-color: #803d47;
   font-size: 18px;
   padding: 10px;
+  border-radius: 12px;
+  border-style: none;
+  top: -10px;
+  left: 780px;
+  opacity: 90%;
 }
 
 .section-button {
