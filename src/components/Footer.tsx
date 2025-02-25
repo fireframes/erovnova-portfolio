@@ -2,7 +2,7 @@ const Footer = () => {
   return (
     <footer>
       <p>
-        &copy; 2024 Елизавета Ровнова,
+        &copy; 2025 Елизавета Ровнова,
         <br className="mobile-break" />
         психолог-консультант секс-терапевт
       </p>
