@@ -8,11 +8,7 @@ const HelpNot: React.FC<HelpNotProps> = ({ onClick }) => {
   return (
     <div className="container">
       <h2>Пока я не обладаю квалификацией для работы с:</h2>
-      <SideMenuButton
-        className="side-button"
-        onClick={onClick}
-        text="С чем я могу помочь"
-      />
+
       <ul>
         <li>Детьми и подростками до 18 лет</li>
         <li>Парами</li>
@@ -33,6 +29,11 @@ const HelpNot: React.FC<HelpNotProps> = ({ onClick }) => {
           специалиста.
         </blockquote>
       </ul>
+      <SideMenuButton
+        className="side-button"
+        onClick={onClick}
+        text="С чем я могу помочь"
+      />
     </div>
   );
 };

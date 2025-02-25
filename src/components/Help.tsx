@@ -55,11 +55,6 @@ const Help: React.FC<HelpProps> = ({ onClick }) => {
     <div className="container help">
       <div className="help-header">
         <h2>С чем я могу помочь</h2>
-        <SideMenuButton
-          className="side-button"
-          onClick={onClick}
-          text="Ограничения моей работы"
-        />
       </div>
       <ul className="help-list">
         {sections.map((section) => (
@@ -94,6 +89,11 @@ const Help: React.FC<HelpProps> = ({ onClick }) => {
           </li>
         ))}
       </ul>
+      <SideMenuButton
+        className="side-button"
+        onClick={onClick}
+        text="Ограничения моей работы"
+      />
     </div>
   );
 };

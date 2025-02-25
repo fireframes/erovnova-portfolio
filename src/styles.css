@@ -58,10 +58,9 @@ li {
 /* Section styles */
 section {
   scroll-margin-top: 50px; /* Adjusted to account for fixed header */
-  width: 100vw; /* This ensures full viewport width */
+  width: 100%;
   color: var(--primary-color);
   background: white;
-  /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); */
 }
 
 section h2 {
@@ -116,6 +115,10 @@ footer {
   color: var(--primary-color);
   padding: 20px 0;
   text-align: center;
+}
+
+footer .mobile-break {
+  display: none;
 }
 
 /* Container styles */
@@ -299,10 +302,10 @@ main {
   margin: 10px 0 40px 0;
   padding: 0 20px;
 }
-
+/* 
 #sex-therapy .container {
-  /* border-left: var(--accent-color) 2px solid; */
-}
+  border-left: var(--accent-color) 2px solid;
+} */
 
 #about {
   background-color: transparent;
@@ -310,7 +313,7 @@ main {
 
 /* Help */
 .help {
-  min-height: 70vh; /* Changed from fixed height to minimum height */
+  min-height: 70%; /* Changed from fixed height to minimum height */
   padding-bottom: 40px; /* Add padding at bottom to prevent content cutoff */
 }
 
@@ -333,7 +336,7 @@ main {
   padding: 10px;
   border-radius: 12px;
   border-style: none;
-  top: -10px;
+  top: 10px;
   left: 770px;
   opacity: 90%;
 }
@@ -668,13 +671,22 @@ main {
     width: 100%;
     margin: 10px;
     padding: 20px;
-    text-indent: 1em;
+    /* text-indent: 1em; */
+  }
+
+  #hero .text-content p {
+    font-size: 16px;
+    line-height: 1.6;
   }
 
   #hero .hero-content img {
-    width: 45%;
-    max-height: 100%;
-    margin: 10px 0;
+    max-width: none; /* Remove the percentage constraint */
+    width: 90%; /* Set explicit width */
+    margin: 10px auto; /* Center the image */
+  }
+
+  #hero blockquote {
+    font-size: 16px;
   }
 
   /* Values section */
@@ -758,6 +770,14 @@ main {
     gap: 10px;
     margin-bottom: 12px;
   }
+
+  footer .mobile-break {
+    display: block;
+  }
+
+  footer p {
+    text-align: center;
+  }
 }
 
 /* Additional breakpoint for very small devices */
@@ -769,6 +789,13 @@ main {
   #hero .hero-content .text-content {
     margin: 5px;
     padding: 15px;
+  }
+
+  #hero .text-content p {
+    font-size: 15px;
+    line-height: 1.5;
+    text-align: justify;
+    text-indent: 0;
   }
 
   #prices .card {
