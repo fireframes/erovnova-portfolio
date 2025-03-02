@@ -321,6 +321,13 @@ main {
   padding-bottom: 40px; /* Add padding at bottom to prevent content cutoff */
 }
 
+.help-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 20px;
+}
+
 .help-list {
   margin: 0; /* Remove default margin */
   padding: 0; /* Remove default padding */
@@ -331,18 +338,50 @@ main {
   margin-bottom: 12px; /* Reduced margin between items */
 }
 
+.not-help-list {
+  background-color: white;
+  padding: 10px 40px 20px;
+  margin-bottom: 10px;
+}
+
+.not-help-list-item {
+  padding: 10px 0;
+  font-size: 20px;
+  color: var(--primary-color);
+}
+
+.note-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.note {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  font-style: italic;
+  color: var(--accent-color);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.6;
+  border-left: 4px solid var(--accent-color);
+  margin: 0;
+}
+
 .side-button {
-  position: relative;
-  left: 70%;
   background-color: #803d47;
   color: #fff;
   font-size: 18px;
   padding: 10px;
   border-radius: 12px;
   border-style: none;
-  top: 10px;
-  left: 770px;
   opacity: 90%;
+}
+
+.side-button:hover {
+  cursor: pointer;
 }
 
 .section-button {
@@ -582,6 +621,8 @@ main {
   font-size: 16px;
 }
 
+/* MEDIA QUERIES */
+
 @media (max-width: 768px) {
   :root {
     --container-padding: 20px;
@@ -737,8 +778,14 @@ main {
 
   /* Help section */
   .help {
-    min-height: auto;
+    /* min-height: auto; */
     padding-bottom: 20px;
+  }
+
+  .help-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
   }
 
   .section-button {
@@ -753,16 +800,6 @@ main {
   .section-content li {
     font-size: 14px;
     padding: 6px 0;
-  }
-
-  .side-button {
-    float: none;
-    display: block;
-    margin: 20px auto;
-    text-align: center;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 16px;
   }
 
   .contacts-grid {
@@ -817,5 +854,22 @@ main {
 
   .container {
     padding: 15px;
+  }
+
+  .help-header {
+    display: block;
+  }
+
+  .side-button {
+    margin-left: 0;
+    width: auto; /* Let it size naturally */
+    position: static; /* Remove any absolute positioning */
+    transform: none; /* Remove any transforms */
+  }
+
+  .help-list {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    list-style: none;
   }
 }
