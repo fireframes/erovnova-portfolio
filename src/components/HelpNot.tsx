@@ -6,34 +6,34 @@ interface HelpNotProps {
 
 const HelpNot: React.FC<HelpNotProps> = ({ onClick }) => {
   return (
-    <div className="container">
-      <h2>Пока я не обладаю квалификацией для работы с:</h2>
+    <div className="container help">
+      <div className="help-header">
+        <h2>Пока я не обладаю квалификацией для работы с:</h2>
+        <SideMenuButton
+          className="side-button"
+          onClick={onClick}
+          text="С чем я могу помочь"
+        />
+      </div>
 
-      <ul>
-        <li>Детьми и подростками до 18 лет</li>
-        <li>Парами</li>
-        <li>
+      <ul className="not-help-list">
+        <li className="not-help-list-item">Детьми и подростками до 18 лет</li>
+        <li className="not-help-list-item">Парами</li>
+        <li className="not-help-list-item">
           Диагностированными психическими расстройствами, расстройством пищевого
           поведения, химическими зависимостями
         </li>
-        <li>Изменами, ревностью</li>
-        <li>Травмой насилия</li>
-        <blockquote>
+        <li className="not-help-list-item">Изменами, ревностью</li>
+        <li className="not-help-list-item">Травмой насилия</li>
+      </ul>
+
+      <div className="note-container">
+        <blockquote className="note">
           Если в ходе работы я пойму, что ваш запрос выходит за рамки моих
           компетенций – я не оставлю вас без помощи и порекомендую нужного
           специалиста для перенаправления.
         </blockquote>
-        <blockquote>
-          Если вам необходима поддержка и вы не знаете, к кому обратиться –
-          напишите мне, чтобы мы могли подобрать вам соответствующего
-          специалиста.
-        </blockquote>
-      </ul>
-      <SideMenuButton
-        className="side-button"
-        onClick={onClick}
-        text="С чем я могу помочь"
-      />
+      </div>
     </div>
   );
 };
