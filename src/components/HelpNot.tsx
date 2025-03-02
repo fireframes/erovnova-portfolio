@@ -23,7 +23,6 @@ const HelpNot: React.FC<HelpNotProps> = ({ onClick }) => {
           Диагностированными психическими расстройствами, расстройством пищевого
           поведения, химическими зависимостями
         </li>
-        <li className="not-help-list-item">Изменами, ревностью</li>
         <li className="not-help-list-item">Травмой насилия</li>
       </ul>
 
