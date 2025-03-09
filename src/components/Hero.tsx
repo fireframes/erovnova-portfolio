@@ -1,5 +1,5 @@
 // import "./Hero.css";
-import photo from "../assets/images/lisa-beach-web.jpg";
+import photo from "../assets/images/hero.webp";
 
 const Hero = () => {
   return (
