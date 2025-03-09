@@ -398,33 +398,39 @@ main {
   cursor: pointer;
   font-size: 20px;
   color: var(--primary-color);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .section-button:hover {
   background-color: var(--secondary-color);
 }
 
+.section-button.active {
+  background-color: var(--secondary-color);
+}
+
 .section-content {
   padding: 8px 16px 16px 32px; /* Adjusted padding */
-  background-color: white;
+  /* background-color: var(--secondary-color); */
   border-radius: 0 0 8px 8px;
   margin-top: 1px; /* Reduced margin */
 }
 
 .section-content ul {
-  margin: 0;
+  margin: 20px 0 0 20px;
   padding: 0;
   list-style: none;
 }
 
 .section-content li {
   padding: 8px 0;
-  font-size: 16px; /* Slightly reduced font size */
+  font-size: 18px; /* Slightly reduced font size */
   line-height: 1.5;
+  list-style: none;
 }
 
 /* VALUES */
+
 #values {
   background-color: transparent;
 }
@@ -468,8 +474,6 @@ main {
 }
 
 /* EDUCATION */
-
-/* Education section styles */
 
 #education .container {
   display: flex;
@@ -585,10 +589,9 @@ main {
   color: #fff;
   border: none;
   border-color: var(--primary-color);
-  border-radius: 10px;
+  border-radius: 12px;
   box-shadow: 2px 2px 8px #362d286d;
-  /* text-shadow: 1px 1px 2px #8b645a; */
-  background: var(--accent-color); /* Corrected from val to var */
+  background: var(--accent-color);
   /* opacity: 70%; */
 }
 
