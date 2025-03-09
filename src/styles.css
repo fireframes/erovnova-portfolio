@@ -18,7 +18,7 @@
   --secondary-color: #f0f0e5;
   --accent-color: #9e8b7c;
   /* --accent-hover: #8b645a; */
-  --accent-hover: #803d47;
+  --accent-hover: #803d47e1;
   --primary-gradient: linear-gradient(90deg, #f0f0e5, #e4c7b8);
 
   font-family: "Gilroy", sans-serif !important;
@@ -379,7 +379,7 @@ main {
   padding: 10px;
   border-radius: 12px;
   border-style: none;
-  opacity: 90%;
+  /* opacity: 90%; */
 }
 
 .side-button:hover {
@@ -662,7 +662,6 @@ main {
 }
 
 .social-links a:hover {
-  transform: scale(1.05);
   color: var(--accent-hover);
 }
 
