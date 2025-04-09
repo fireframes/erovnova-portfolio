@@ -289,7 +289,9 @@ main {
 }
 
 #hero .hero-content img {
-  max-width: 45%;
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
   height: auto;
   max-height: 500px;
   object-fit: cover;
@@ -799,9 +801,8 @@ main {
   }
 
   #hero .hero-content img {
-    max-width: none; /* Remove the percentage constraint */
-    width: 90%; /* Set explicit width */
-    margin: 10px auto; /* Center the image */
+    max-width: 100%;
+    margin: 10px auto;
   }
 
   #hero blockquote {
