@@ -8,12 +8,14 @@ const HelpNot: React.FC<HelpNotProps> = ({ onClick }) => {
   return (
     <div className="container help">
       <div className="help-header">
-        <h2>Пока я не обладаю квалификацией для работы с:</h2>
-        <SideMenuButton
-          className="side-button"
-          onClick={onClick}
-          text="С чем я могу помочь"
-        />
+        <h2>Пока я не работаю с:</h2>
+        <div className="hel p-button-desktop">
+          <SideMenuButton
+            className="side-button"
+            onClick={onClick}
+            text="С чем я могу помочь"
+          />
+        </div>
       </div>
 
       <ul className="not-help-list">
@@ -32,6 +34,14 @@ const HelpNot: React.FC<HelpNotProps> = ({ onClick }) => {
           компетенций – я не оставлю вас без помощи и порекомендую нужного
           специалиста для перенаправления.
         </blockquote>
+      </div>
+
+      <div className="help-button-mobile">
+        <SideMenuButton
+          className="side-button"
+          onClick={onClick}
+          text="С чем я могу помочь"
+        />
       </div>
     </div>
   );
