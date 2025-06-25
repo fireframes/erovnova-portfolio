@@ -11,12 +11,18 @@ const Header = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const handleScrollToTop = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <header className={`header ${isMenuOpen ? "show" : ""}`}>
       <nav className="navbar">
         <a
           className="fix-home"
-          href="index.html"
+          href="#"
+          onClick={handleScrollToTop}
           style={{ right: "0", bottom: "10%", position: "fixed" }}
         >
           <FontAwesomeIcon icon={faArrowUp} size="xl" />
