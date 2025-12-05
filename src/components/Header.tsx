@@ -8,12 +8,19 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+    setIsMenuOpen(true);
   };
 
   const handleScrollToTop = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const handleNavClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    const target = e.target as HTMLElement;
+    if (target.tagName === "A") {
+      setIsMenuOpen(false);
+    }
   };
 
   return (
@@ -50,7 +57,10 @@ const Header = () => {
             </button>
           </div>
 
-          <div className={`nav ${isMenuOpen ? "show" : ""}`}>
+          <div
+            className={`nav ${isMenuOpen ? "show" : ""}`}
+            onClick={handleNavClick}
+          >
             {/* <a href="#sex-therapy">Cекс-терапия?</a> */}
             <a href="#about">Обо мне</a>
             <a href="#help">С чем я могу помочь</a>

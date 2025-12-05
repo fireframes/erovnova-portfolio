@@ -7,7 +7,7 @@ import Education from "./Education";
 import Values from "./Values";
 import Prices from "./Prices";
 import FAQ from "./FAQ";
-import { useState, useEffect, useRef } from "react";
+import { useState, useRef } from "react";
 import Contacts from "./Contacts";
 
 const Main = () => {
@@ -16,19 +16,7 @@ const Main = () => {
 
   const handleClick = () => {
     setIsSideMenuClicked(!isSideMenuClicked);
-    // console.log("click!");
   };
-
-  // useEffect(() => {
-
-  //   if (helpSectionRef.current) {
-  //     // Scroll to the help section header with smooth behavior
-  //     helpSectionRef.current.scrollIntoView({
-  //       behavior: 'smooth',
-  //       block: 'start'
-  //     });
-  //   }
-  // }, [isSideMenuClicked]);
 
   return (
     <main>
