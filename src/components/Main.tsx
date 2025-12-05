@@ -19,15 +19,16 @@ const Main = () => {
     // console.log("click!");
   };
 
-  useEffect(() => {
-    if (helpSectionRef.current) {
-      // Scroll to the help section header with smooth behavior
-      helpSectionRef.current.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
-    }
-  }, [isSideMenuClicked]);
+  // useEffect(() => {
+
+  //   if (helpSectionRef.current) {
+  //     // Scroll to the help section header with smooth behavior
+  //     helpSectionRef.current.scrollIntoView({
+  //       behavior: 'smooth',
+  //       block: 'start'
+  //     });
+  //   }
+  // }, [isSideMenuClicked]);
 
   return (
     <main>
