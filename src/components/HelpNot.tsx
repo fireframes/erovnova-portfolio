@@ -9,7 +9,7 @@ const HelpNot: React.FC<HelpNotProps> = ({ onClick }) => {
     <div className="container help">
       <div className="help-header">
         <h2>Пока я не работаю с:</h2>
-        <div className="hel p-button-desktop">
+        <div className="help-button-desktop">
           <SideMenuButton
             className="side-button"
             onClick={onClick}
