@@ -24,3 +24,6 @@ work
 *.njsproj
 *.sln
 *.sw?
+
+# Tmp files
+tmp/
