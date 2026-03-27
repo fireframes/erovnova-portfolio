@@ -1,6 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
+import certificate from "../assets/images/education/certificate.png";
+import diploma2024 from "../assets/images/education/diploma_2024.png";
+import diploma2025 from "../assets/images/education/diploma_2025.png";
+
+const slides = [certificate, diploma2024, diploma2025];
 
 const Education = () => {
+  const [current, setCurrent] = useState(0);
+
+  const prev = () => setCurrent((c) => (c - 1 + slides.length) % slides.length);
+  const next = () => setCurrent((c) => (c + 1) % slides.length);
+
   return (
     <section id="education">
       <div className="container">
@@ -49,6 +59,21 @@ const Education = () => {
             *Это работа с более опытным профессионалом или встречи с коллегами,
             на которых происходит обмен опытом и оказывается помощь при
             возникновении затруднений
+          </div>
+
+          {/* Photo slideshow */}
+          <div className="edu-slideshow">
+            <button className="edu-arrow edu-arrow--left" onClick={prev} aria-label="Previous">&#8249;</button>
+            <div className="edu-slide-track">
+              <img
+                key={current}
+                src={slides[current]}
+                alt={`Документ ${current + 1}`}
+                className="edu-slide-img"
+              />
+            </div>
+            <button className="edu-arrow edu-arrow--right" onClick={next} aria-label="Next">&#8250;</button>
+            <div className="edu-slide-counter">{current + 1} / {slides.length}</div>
           </div>
         </div>
       </div>
