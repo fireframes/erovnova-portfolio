@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import certificate from "../assets/images/education/certificate.png";
+// import certificate from "../assets/images/education/certificate.png";
 import diploma2024 from "../assets/images/education/diploma_2024.png";
 import diploma2025 from "../assets/images/education/diploma_2025.png";
 
-const slides = [certificate, diploma2024, diploma2025];
+const slides = [diploma2024, diploma2025];
 
 const Education = () => {
   const [current, setCurrent] = useState(0);
@@ -63,7 +63,13 @@ const Education = () => {
 
           {/* Photo slideshow */}
           <div className="edu-slideshow">
-            <button className="edu-arrow edu-arrow--left" onClick={prev} aria-label="Previous">&#8249;</button>
+            <button
+              className="edu-arrow edu-arrow--left"
+              onClick={prev}
+              aria-label="Previous"
+            >
+              &#8249;
+            </button>
             <div className="edu-slide-track">
               <img
                 key={current}
@@ -72,8 +78,16 @@ const Education = () => {
                 className="edu-slide-img"
               />
             </div>
-            <button className="edu-arrow edu-arrow--right" onClick={next} aria-label="Next">&#8250;</button>
-            <div className="edu-slide-counter">{current + 1} / {slides.length}</div>
+            <button
+              className="edu-arrow edu-arrow--right"
+              onClick={next}
+              aria-label="Next"
+            >
+              &#8250;
+            </button>
+            <div className="edu-slide-counter">
+              {current + 1} / {slides.length}
+            </div>
           </div>
         </div>
       </div>

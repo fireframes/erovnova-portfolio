@@ -1,3 +1,4 @@
 ## Development Best Practices
 
-- Always ignore .env files
+- ALWAYS ignore .env files
+- ALWAYS prefix package installations with "sfw" - Socket Firewall!
